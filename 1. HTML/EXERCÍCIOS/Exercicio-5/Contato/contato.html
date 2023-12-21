@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+
+    <!--CSS-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        header {
+            margin: 25px;
+            padding: 15px;
+        }
+
+        form {
+            margin: 30px;
+            padding: 10px;
+        }
+
+        fieldset {
+            padding: 20px;
+            width: 500px;
+        }
+
+        input {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        select {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        textarea {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h1>Contato</h1>
+        </nav>
+    </header>
+
+    <form action="" class="content">
+
+        <fieldset class="fieldsetForm">
+            <legend class="legendForm"> Deixe seu recado...</legend>
+
+            <div class="formulario">
+
+                <!--Nome Completo-->
+                <input type="text" id="idNome" placeholder="Nome Completo" class="form" required
+                    pattern="^(\w\w+)\s(\w+)$" title="Preencha seu Nome Completo">
+
+                <br>
+
+                <!--E-mail-->
+                <input type="email" id="idEmail" placeholder="seu@email.com" class="form" required>
+
+                <br>
+
+                <!--Empresa-->
+                <input type="text" id="idEmpresa" placeholder="Empresa/Organização" class="form">
+
+                <br>
+
+                <!--Telefone-->
+                <input type="tel" id="idTelefone" placeholder="Telefone" class="form"
+                    pattern="\([0-9]{2}\)[\s][0-9]{4,5}-[0-9]{4}" title="(xx) xxxxx-xxxx">
+
+                <br>
+
+                <!--Motivo do contato-->
+                <select id="idMotivo" class="form" required>
+                    <option selected disabled>Motivo do Contato</option>
+                    <option value="volvo">Elogio</option>
+                    <option value="saab">Problema com produto</option>
+                    <option value="fiat">Reclamação</option>
+                    <option value="audi">Sugestão</option>
+                    <option value="audi">Outro</option>
+                </select>
+
+                <br>
+
+                <!--Mensagem-->
+                <textarea id="idMensagem" placeholder="Mensagem" class="form" required cols="30" minlength="5"
+                    maxlength="100" rows="5"></textarea>
+
+                <br>
+
+                <!--Botão-->
+                <button type="submit" id="idBotao">Enviar</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>

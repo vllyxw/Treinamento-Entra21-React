@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Login</title>
+
+    <!--CSS-->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        header {
+            margin: 25px;
+            padding: 15px;
+        }
+
+        form {
+            margin: 30px;
+            padding: 10px;
+        }
+
+        fieldset {
+            padding: 20px;
+            width: 500px;
+        }
+
+        input {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        
+
+        button {
+            margin-top: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h1>Login</h1>
+        </nav>
+    </header>
+    <form action="" class="formulario">
+
+        <!--Senha-->
+        <label for="idUsuario" class="etiqueta">Usuário:</label>
+        <input type="text" id="idUsuario" class="campoFormulario" required minlength="5"
+            title="Deve conter 5 ou mais caracteres.">
+
+        <br>
+
+        <!--Senha-->
+        <label for="idSenha" class="etiqueta">Senha:</label>
+        <input type="password" id="idSenha" class="campoFormulario" required
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}"
+            title="Deve conter pelo menos um número e uma letra maiúscula e minúscula e pelo menos 5 ou mais caracteres.">
+
+        <br>
+
+        <button type="submit" class="botaoForm">Login</button>
+    </form>
+</body>
+
+</html>
